@@ -13,6 +13,7 @@ int main()
      while(!iswin())
      {
          entermove(cnt);
+         system("CLS");
          displayboard();
          cnt++;
          gcnt++;
@@ -36,6 +37,7 @@ int main()
 void displayboard()
 {
     system("Color 7C");
+    //textcolor(RED);
      cout<<"\t\t\t\t\t\t\t\t\t\t\tTic Tac Toe by sanket pathak\n";
     cout<<"\n\n\n\n\n\n";
 	cout << "\t\t\t\t\t\t\t\t\t\tfirst one is circle and second is cross\n";
@@ -80,36 +82,47 @@ int iswin()
 void entermove(int i)
 {
 	char no;
-	while(1)
-    {
-        cout<<"enter the block number between 1 to 9";
-        cin >> no;
-        if(no<48 && no>57)
-            continue;
-        break;
 
-
-    }
 	if (i % 2 == 0)
 	{
+	    	while(1)
+        	{
+            		cout<<"player 1 enter the block number between 1 to 9";
+            		cin >> no;
+            		if(no<48 && no>57)
+                		continue;
+            		break;
+
+
+        	}
 		for (int i = 0; i < 3; i++)
-        {
-            for(int j=0;j<3;j++)
-            {
-                if(no==a[i][j])
-                    a[i][j]='O';
-            }
-        }
+        	{
+            		for(int j=0;j<3;j++)
+            		{
+                		if(no==a[i][j])
+                    			a[i][j]='O';
+            		}
+        	}
 	}
 	if (i % 2 == 1)
 	{
+	    	while(1)
+        	{
+            		cout<<"player 2 enter the block number between 1 to 9";
+            		cin >> no;
+            		if(no<48 && no>57)
+                		continue;
+            		break;
+
+
+        	}
 		for (int i = 0; i < 3; i++)
-        {
-            for(int j=0;j<3;j++)
-            {
-                if(no==a[i][j])
-                    a[i][j]='X';
-            }
-        }
+        	{
+            		for(int j=0;j<3;j++)
+            		{
+                		if(no==a[i][j])
+                    			a[i][j]='X';
+	            	}
+        	}
 	}
 }
