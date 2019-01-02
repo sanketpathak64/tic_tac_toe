@@ -24,13 +24,13 @@ int main()
          }
      }
      if(cnt%2==0)
-        cout<<"player 2 wins";
+        cout<<"congratulations .....!!! You won Player 2 ";
      else
      {
          if(flg==1)
             cout<<"\ngame tied why don't you guys have another one run this code again";
          else
-            cout<<"player 1 wins";
+            cout<<"congratulations .....!!! You won Player 1 ";
      }
     return 0;
 }
@@ -87,7 +87,7 @@ void entermove(int i)
 	{
 	    	while(1)
         	{
-            		cout<<"player 1 enter the block number between 1 to 9";
+            		cout<<"player 1 enter the block number between 1 to 9  : ";
             		cin >> no;
             		if(no<48 && no>57)
                 		continue;
